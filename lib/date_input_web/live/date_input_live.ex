@@ -18,9 +18,6 @@ defmodule DateInputWeb.DateInputLive do
         _uri,
         socket
       ) do
-    # from_date = String.to_integer(from_date)
-    # to_date = String.to_integer(to_date)
-
     socket =
       socket
       |> assign(:from_date, unix_to_iso(from_date))
