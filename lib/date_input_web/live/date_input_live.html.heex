@@ -1,0 +1,32 @@
+<form id="visits-filters" phx-change="filter">
+  <!-- Add filters etc here -->
+  <div id="ignore-from-date" phx-update="ignore">
+    <label for="from-date">From:</label>
+    <input
+      id="visit-from-date-input"
+      type="text"
+      name="from-date"
+      phx-hook="DatePicker"
+      data-datetime={@from_date}
+    />
+  </div>
+  <div id="ignore-to-date" phx-update="ignore">
+    <label for="to-date">To:</label>
+    <input
+      id="visit-to-date-input"
+      type="text"
+      name="to-date"
+      phx-hook="DatePicker"
+      data-datetime={@to_date}
+    />
+  </div>
+  <div>
+    <label for="subjects">Filter:</label>
+    <select name="subject" id="subjects">
+      <%= options_for_select([{"-- Select Subject --", ""} | ["a", "b", "c"]], @subject) %>
+    </select>
+  </div>
+  <div>
+    <%= link("Reset", to: "#", phx_click: "reset") %>
+  </div>
+</form>
