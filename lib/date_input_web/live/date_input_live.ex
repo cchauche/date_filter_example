@@ -8,8 +8,8 @@ defmodule DateInputWeb.DateInputLive do
 
   defp default_assigns(socket) do
     socket
-    |> assign(:from_date, "")
-    |> assign(:to_date, "")
+    |> assign(:from_date, "2021-12-02T17:00:00Z")
+    |> assign(:to_date, "2021-12-05T17:00:00Z")
     |> assign(:subject, "")
   end
 
